@@ -17,9 +17,11 @@
     <%= render "partials/topnav" %>
     <div class="container-fluid">
         <div class="row flex-xl-nowrap">
-          <%= render "partials/leftmenu",
+          <% if current_user %>
+            <%= render "partials/leftmenu",
               pubs: Publication.where("organisation_id = ?", current_user["organisation_id"])
-           %>
+              %>
+          <% end %>
           <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
             <%= render "partials/alerts" %>
             <%= yield %>
