@@ -23,6 +23,4 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  username: <%= ENV[DB_USERNAME] %>
-  password: <%= ENV[DB_PASSWORD] %>
   url: <%= ENV[DATABASE_URL] %>
