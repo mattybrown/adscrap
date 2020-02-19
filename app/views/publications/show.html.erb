@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @publication.name %>
+</p>
+
+<p>
+  <strong>Page height:</strong>
+  <%= @publication.page_height %>
+</p>
+
+<p>
+  <strong>Columns:</strong>
+  <%= @publication.columns %>
+</p>
+
+<p>
+  <strong>Organisation:</strong>
+  <%= @publication.organisation.name %>
+</p>
+
+<% @issues.each do |i| %>
+  <%= link_to "#{i.id}: #{i.pub_date} - #{i.name}", issue_path(i.id) %>
+<% end %>
+
+<%= link_to 'Edit', edit_publication_path(@publication) %> |
+<%= link_to 'Back', publications_path %>

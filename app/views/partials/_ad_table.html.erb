@@ -1,0 +1,27 @@
+
+<div class="table-responsive">
+  <table class="table table-hover table-sm">
+    <tr>
+      <th>Size</th>
+      <th>Client</th>
+      <th>Position</th>
+      <th>Status</th>
+      <th>Instructions</th>
+      <th>Price</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <% ads.each do |ad| %>
+    <tr>
+      <td><%= "#{ad.height}x#{ad.width}" %></td>
+      <td><%= Client.find(ad.client_id).name %></td>
+      <td><%= Position.find(ad.position).name %></td>
+      <td><%= ad.status %></td>
+      <td><%= ad.instructions %></td>
+      <td><%= number_to_currency(ad.price) %></td>
+      <td><%= link_to 'View', advertisement_path(ad) %></td>
+      <td><%= link_to 'Edit', edit_advertisement_path(ad) %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>

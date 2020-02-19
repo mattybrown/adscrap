@@ -1,0 +1,13 @@
+<div class="container">
+  <p>
+    <%= @advertisement.position %>
+  </p>
+  <p>
+    <%= @advertisement.status %>
+  </p>
+  <p>
+    <%= @advertisement.instructions %>
+  </p>
+  <%= link_to 'Delete', advertisement_path(@advertisement), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Back', advertisements_path %>
+</div>

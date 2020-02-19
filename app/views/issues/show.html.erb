@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<p>Take: <%= number_to_currency(@total) %></p>
+<p>
+  <strong>Publication date:</strong>
+  <%= @issue.pub_date %>
+</p>
+
+<p>
+  <strong>Publication:</strong>
+  <%= @issue.publication.name %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @issue.name %>
+</p>
+
+<%= link_to 'Edit', edit_issue_path(@issue) %> |
+<%= link_to 'Back', issues_path %>
+
+<%= render 'partials/ad_table', ads: @ads %>

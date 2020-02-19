@@ -1,0 +1,88 @@
+Goal:
+
+A platform for salespeople, designers and publishers to quickly and
+easily view, create, edit and proof advertising placements across a
+variety of media.
+
+A portal for accurate reporting on performance, ad spend and revenue.
+
+
+Core functionality:
+
+Booking an ad.
+
+Reporting.
+
+
+Extra functionality:
+
+Sales goals?
+Invoicing?
+Proofing tools? Approval, changes links?
+
+
+
+The model:
+
+Ad - print or digital advertising
+  Has dimensions
+  Costs cash money to run
+  Belongs to an advertiser account, but could be assigned to another(?)
+  Could be part of a wider advertising campaign
+  Booked by someone
+  Will run in some sort, or several publication(s)
+  May have a special position (tags?)
+  Could have special instructions - eg. must be on a right page
+  Begins as an idea and goes through a creation, proof, approval process.
+  Is advertising something - keywords maybe?
+  Involves conversations, like between advertiser, sales rep and creative...comment section?
+  Can be described using words
+
+Campaign - an overarching organisation of several different sized/platform ads on a similar topic
+  Is it necessary? Too complex?
+  Could group together similar ads for publishers that have different platforms
+  Extra complexity?
+  OR it could be for longer lasting campaigns on the publishers side, such as tipping or shop & win promotions
+
+
+Publisher - could be a newspaper, magazine, website or parish newsletter.
+  Is called something
+  Has places where ads can be shown, like pages, features or banners.
+  Publishes regularly like a magazine or a newspaper, or is always published, such as a website.
+
+
+USERS
+  Have names and contact details
+  Need to be able to log in and out
+  Common tasks easy and obvious
+
+Advertiser - someone that wants to run advertising
+  Could be a business, an ad account or be a one off
+  Intends to run at least one ad, but could run many
+  Probably has a goal with their advertising, such as branding or sales
+  Wants to make sure the ad is correct, or request changes.
+  Is interested in the amount of money being spent
+  Monthly invoice on the 20th?
+
+Sales rep - people that aren't necessarily good with computers despite using them every day for their job
+  Good at selling stuff, but usually not much else.
+  Should be booking heaps of ads - the software power user.
+  Probably have sales goals
+  The liaison between the advertiser and creative
+  Would like to know the amount of ads sold and revenue gathered
+
+Creative - the talented ones
+  Can generally understand complex ideas
+  Doesn't want to spend time fucking with software (inDesign plugin?)
+  Needs to be able to upload proofs and ask questions
+  Stats on ads created?
+
+Accounts - the bean counters
+  Need to know if there are outstanding invoices
+  Would be good to be able to tag accounts paid
+
+Admin/the Boss - the person in charge of the platform, business or salespeople
+  Needs an overview on revenue
+  Would like to know how salespeople are performing.
+  Comparisons between platforms and publications
+  Trends over time

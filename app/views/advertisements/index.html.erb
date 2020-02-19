@@ -1,0 +1,23 @@
+
+  <h1>Listing Advertisements</h1>
+  <div class="table-responsive">
+    <table class="table table-hover table-sm">
+      <tr>
+        <th>Postion</th>
+        <th>Status</th>
+        <th>Instructions</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <% @advertisements.each do |ad| %>
+      <tr>
+        <td><%= ad.position %></td>
+        <td><%= ad.status %></td>
+        <td><%= ad.instructions %></td>
+        <td><%= link_to 'View', advertisement_path(ad) %></td>
+        <td><%= link_to 'Edit', edit_advertisement_path(ad) %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+<%= link_to 'Home', :root %>
