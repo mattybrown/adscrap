@@ -12,9 +12,9 @@
   </form>
 
 <hr />
-  <ul class="nav flex-colum" aria-label="Main navigation">
-    <strong>Publication</strong>
+  <ul class="nav flex-column" aria-label="Main navigation">
     <li class="nav-item">
+      <strong>Publication</strong>
       <% if pubs %>
         <% pubs.each do |pub| %>
           <%= link_to pub.name, publication_path(pub.id), class: "nav-link" %>
@@ -22,12 +22,21 @@
       <% end %>
     </li>
 
-    <!-- <strong>Issue</strong>
-    <li class="nav-item">
+    <!-- <li class="nav-item">
+      <strong>Issue</strong>
       <a class="nav-link active" href="#">Issue #1 - 18/02/2020</a>
       <a class="nav-link active" href="#">Issue #2 - 25/02/2020</a>
       <a class="nav-link active" href="#">Issue #3 - 03/03/2020</a>
     </li> -->
+  </ul>
+  <hr />
+  <ul class="nav flex-column" aria-label="Common tasks">
+    <li class="nav-item">
+      <%= link_to "Create an ad", new_advertisement_path, class: "nav-link active" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "Create a client", new_client_path, class: "nav-link active" %>
+    </li>
   </ul>
   <hr />
   <%= link_to "Log out", destroy_user_session_path, method: :delete %>
