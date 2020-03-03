@@ -3,7 +3,7 @@
   <div class="table-responsive">
     <table class="table table-hover table-sm">
       <tr>
-        <th>Postion</th>
+        <th>Position</th>
         <th>Status</th>
         <th>Instructions</th>
         <th></th>
@@ -11,7 +11,7 @@
       </tr>
       <% @advertisements.each do |ad| %>
       <tr>
-        <td><%= ad.position %></td>
+        <td><%= ad.position_id %></td>
         <td><%= ad.status %></td>
         <td><%= ad.instructions %></td>
         <td><%= link_to 'View', advertisement_path(ad) %></td>

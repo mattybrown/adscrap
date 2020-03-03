@@ -17,7 +17,7 @@
       <td><%= Client.find(ad.client_id).name %></td>
       <td><%= Position.find(ad.position).name %></td>
       <td><%= ad.status %></td>
-      <td><%= ad.instructions %></td>
+      <td><%= ad.instructions.truncate(45) %></td>
       <td><%= number_to_currency(ad.price) %></td>
       <td><%= link_to 'View', advertisement_path(ad) %></td>
       <td><%= link_to 'Edit', edit_advertisement_path(ad) %></td>

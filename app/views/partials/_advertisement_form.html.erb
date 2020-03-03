@@ -23,7 +23,13 @@
       </div>
       <div class="col">
         <%= form.label :status %><br />
-        <%= form.text_field :status, class: "form-control" %>
+        <%= form.select :status, raw("
+          <option value='In progress'>In progress</option>
+          <option value='Proof'>Proof</option>
+          <option value='Changes needed'>Changes needed</option>
+          <option value='Approved'>Approved</option>
+          <option value='Placed'>Placed</option>
+        "), {}, class: "form-control" %>
       </div>
     </div>
   </div>
@@ -33,28 +39,37 @@
     <%= form.text_area :instructions, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= form.label :issue_id %><br />
-    <%= form.collection_select(:issue_id, Issue.all, :id, :pub_date) %>
-  </div>
-  <div class="form-group">
-    <%= form.label :client %><br />
-    <%= form.collection_select(:client_id, Client.all, :id, :name) %>
-  </div>
-  <div class="form-group">
-    <%= form.label :position %><br />
-    <%= form.collection_select(:position, Position.all, :id, :name) %>
-  </div>
-  <%= form.label :price %><br />
-  <div class="input-group mb-3">
-    <div class="input-group-prepend">
-      <span class="input-group-text">$</span>
-    </div>
-    <%= form.text_field :price, class: "form-control" %>
-    <div class="input-group-append">
-      <span class="input-group-text">.00</span>
+    <div class="form-row">
+      <div class="col">
+        <%= form.label :issue_id %><br />
+        <%= form.collection_select(:issue_id, Issue.all, :id, :pub_date, {}, {class: "form-control"}) %>
+      </div>
+      <div class="col">
+        <%= form.label :client %><br />
+        <%= form.collection_select(:client_id, Client.all, :id, :name, {}, {class: "form-control"}) %>
+      </div>
     </div>
   </div>
   <div class="form-group">
+    <div class="form-row">
+      <div class="col">
+        <%= form.label :position_id %><br />
+        <%= form.collection_select(:position_id, Position.all, :id, :name, {}, {class: "form-control"}) %>
+      </div>
+      <div class="col">
+        <%= form.label :price %><br />
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+          </div>
+          <%= form.text_field :price, class: "form-control" %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= form.hidden_field(:user_id, value: current_user.id) %>
     <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>

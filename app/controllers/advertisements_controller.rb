@@ -5,6 +5,7 @@ class AdvertisementsController < ApplicationController
 
   def show
     @advertisement = Advertisement.find(params[:id])
+    @position = Position.find(@advertisement.position_id)
   end
 
   def new
@@ -45,14 +46,15 @@ class AdvertisementsController < ApplicationController
   private
     def advertisement_params
       params.require(:advertisement).permit(
-        :position,
+        :position_id,
         :status,
         :instructions,
         :issue_id,
         :client_id,
         :width,
         :height,
-        :price
+        :price,
+        :user_id
       )
     end
 end
