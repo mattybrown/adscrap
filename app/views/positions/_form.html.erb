@@ -12,16 +12,19 @@
   <% end %>
 
   <div class="form-group">
-    <%= form.label :publication_id %><br />
-    <%= form.collection_select(:publication_id, @pubs, :id, :name) %>
+    <div class="form-row">
+      <div class="col">
+        <%= form.label :publication_id %><br />
+        <%= form.collection_select(:publication_id, @pubs, :id, :name, {}, {class: "form-control"}) %>
+      </div>
+      <div class="col">
+        <%= form.label :name %>
+        <%= form.text_field :name, class: "form-control" %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>

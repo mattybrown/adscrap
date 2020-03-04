@@ -1,18 +1,9 @@
 <p id="notice"><%= notice %></p>
-<p>Take: <%= number_to_currency(@total) %></p>
+<h4><%= @issue.publication.name %></h4>
+<p><%= "#{number_to_currency(@total)} from #{@ads.count} ads" %></p>
 <p>
-  <strong>Publication date:</strong>
-  <%= @issue.pub_date %>
-</p>
-
-<p>
-  <strong>Publication:</strong>
-  <%= @issue.publication.name %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @issue.name %>
+  <strong><%= @issue.publication.name %></strong>
+  Deadline: <%= @issue.pub_date.to_formatted_s(:long) %>
 </p>
 
 <%= link_to 'Edit', edit_issue_path(@issue) %> |

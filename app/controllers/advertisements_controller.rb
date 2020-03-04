@@ -6,6 +6,7 @@ class AdvertisementsController < ApplicationController
   def show
     @advertisement = Advertisement.find(params[:id])
     @position = Position.find(@advertisement.position_id)
+    @client = Client.find(@advertisement.client_id)
   end
 
   def new

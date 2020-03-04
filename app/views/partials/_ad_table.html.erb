@@ -15,7 +15,7 @@
     <tr>
       <td><%= "#{ad.height}x#{ad.width}" %></td>
       <td><%= Client.find(ad.client_id).name %></td>
-      <td><%= Position.find(ad.position).name %></td>
+      <td><%= Position.find(ad.position_id).name %></td>
       <td><%= ad.status %></td>
       <td><%= ad.instructions.truncate(45) %></td>
       <td><%= number_to_currency(ad.price) %></td>

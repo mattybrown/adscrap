@@ -1,9 +1,15 @@
 <div class="container">
+  <h4>Viewing ad #<%= @advertisement.id %></h4>
   <p>
+    <%= "#{@advertisement.height}x#{@advertisement.width}" %>
+    <%= @client.name %>
     <%= @position.name %>
   </p>
   <p>
     <%= @advertisement.status %>
+  </p>
+  <p>
+    <%= number_to_currency(@advertisement.price) %>
   </p>
   <p>
     <%= @advertisement.instructions %>

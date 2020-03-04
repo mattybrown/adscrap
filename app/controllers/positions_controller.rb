@@ -20,6 +20,7 @@ class PositionsController < ApplicationController
 
   # GET /positions/1/edit
   def edit
+    @pubs = Publication.where("organisation_id = ?", current_user["organisation_id"])
   end
 
   # POST /positions
