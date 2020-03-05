@@ -1,8 +1,8 @@
 <div class="container">
-  <h5>My ads</h5>
+  <p>Total for <%= Date.today.strftime("%B") %>:
+  <%= number_to_currency(@total) %></p>
+
+  <h5>My last six ads booked</h5>
   <%= render 'partials/ad_table', ads: @ads %>
 
-  <% @this_months_issues.each do |i| %>
-  <%= i.pub_date %>
-  <% end %>
 </div>

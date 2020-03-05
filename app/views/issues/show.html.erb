@@ -1,12 +1,16 @@
-<p id="notice"><%= notice %></p>
-<h4><%= @issue.publication.name %></h4>
-<p><%= "#{number_to_currency(@total)} from #{@ads.count} ads" %></p>
-<p>
-  <strong><%= @issue.publication.name %></strong>
-  Deadline: <%= @issue.pub_date.to_formatted_s(:long) %>
-</p>
+<%= render 'partials/bar_chart' %>
 
-<%= link_to 'Edit', edit_issue_path(@issue) %> |
-<%= link_to 'Back', issues_path %>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <h4><%= @issue.publication.name %></h4>
+  <p><%= "#{number_to_currency(@total)} from #{@ads.count} ads" %></p>
+  <p>
+    <strong><%= @issue.publication.name %></strong>
+    Deadline: <%= @issue.pub_date.to_formatted_s(:long) %>
+  </p>
 
-<%= render 'partials/ad_table', ads: @ads %>
+  <%= link_to 'Edit', edit_issue_path(@issue) %> |
+  <%= link_to 'Back', issues_path %>
+
+  <%= render 'partials/ad_table', ads: @ads %>
+</div>

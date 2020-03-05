@@ -12,7 +12,7 @@
       <th></th>
     </tr>
     <% ads.each do |ad| %>
-    <tr>
+    <tr class="<%= ad.status.downcase.gsub(/\s+/, "")  %>">
       <td><%= "#{ad.height}x#{ad.width}" %></td>
       <td><%= Client.find(ad.client_id).name %></td>
       <td><%= Position.find(ad.position_id).name %></td>
