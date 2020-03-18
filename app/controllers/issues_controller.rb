@@ -12,6 +12,14 @@ class IssuesController < ApplicationController
   def show
     @ads = Advertisement.where("issue_id = ?", params[:id])
     @total = @ads.map{ |t| t.price }.compact.inject{ |sum,x| sum + x}
+    # totaling up each users sales for the issue
+    user_totals = []
+    @ads.each do |a|
+      z = [a.user_id, a.price]
+      user_totals << z
+    end
+    user_totals.map{ |x| }
+    @ut = user_totals
   end
 
   # GET /issues/new
